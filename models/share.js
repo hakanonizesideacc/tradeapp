@@ -17,7 +17,7 @@ module.exports = (sequelize, DataTypes) => {
         validate: {
           notNull: { msg: 'Must provide a valid symbol' },
           notEmpty: { msg: 'Symbol can not be empty' },
-          is: /(.*[A-Z]){3}/i,
+          is: /^[a-zA-Z]{3}$/,
         },
       },
       rate: {
