@@ -4,9 +4,10 @@ const router = express.Router();
 const user = require('./user');
 const portfolio = require('./portfolio');
 const share = require('./share');
+const buy = require('../controllers/buy');
 
-router.get('/buy');
-router.get('/sell');
+router.post('/buy', buy);
+router.post('/sell');
 
 router.use('/user', user);
 router.use('/portfolio', portfolio);

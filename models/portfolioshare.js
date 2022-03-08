@@ -15,7 +15,7 @@ module.exports = (sequelize, DataTypes) => {
     {
       portfolio_id: DataTypes.INTEGER,
       share_id: DataTypes.INTEGER,
-      amounth: DataTypes.INTEGER,
+      amounth: DataTypes.DOUBLE,
     },
     {
       sequelize,
