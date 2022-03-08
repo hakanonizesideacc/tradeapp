@@ -4,5 +4,5 @@ dotenv.config();
 const { PORT } = process.env;
 
 module.exports = {
-  port: PORT,
+  port: PORT || 4200,
 };
