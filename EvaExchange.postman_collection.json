@@ -1,0 +1,405 @@
+{
+	"info": {
+		"_postman_id": "1e18f5e7-ccde-4441-a2d9-24977a6668ce",
+		"name": "EvaExchange",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "Add User",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\" : \"test-user\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/api/user",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"user"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Users",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/user/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"user",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get User",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/user/1",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"user",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update User",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\" : \"Frank\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/api/user/1",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"user",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete User",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/user/7",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"user",
+								"7"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Portfolio",
+			"item": [
+				{
+					"name": "Add Portfolio",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"user_id\" : 6\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/api/portfolio",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"portfolio"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Porfolios",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/portfolio",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"portfolio"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Portfolio",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "Update Portfolio",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"user_id\" : 7\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/api/portfolio/3",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"portfolio",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Portfolio",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/portfolio/2",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"portfolio",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Share",
+			"item": [
+				{
+					"name": "Add Share",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"symbol\" : \"ASD\",\r\n    \"rate\": 22.11\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/api/share/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"share",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Shares",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/share/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"share",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Share",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/share/2",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"share",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Share",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"symbol\": \"BJK\",\r\n    \"rate\": 36.99 \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/api/share/2",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"share",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Share",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/share/2",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"share",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Buy",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\" : \"Emily\",\r\n    \"share\" : \"BNB\",\r\n    \"amounth\" : 3.1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/api/buy/",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"buy",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Sell",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\" : \"Jason\",\r\n    \"share\" : \"SOL\",\r\n    \"amounth\" : 1333\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/api/sell/",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"sell",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
