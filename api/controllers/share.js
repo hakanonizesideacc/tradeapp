@@ -58,6 +58,13 @@ const updateShare = async (req, res) => {
       resultMessage: 'There is no Share with provided id',
     });
 
+  const diffTime = Math.abs(Date.now() - share.updatedAt);
+  const diffHours = Math.abs(diffTime / (1000 * 60 * 60));
+
+  if (diffHours < 1)
+    return res.status(400).json({
+      resultMessage: 'Wait an hour to update price',
+    });
   const updatedShare = await share
     .update({
       symbol: req.body.symbol || share.symbol,

@@ -5,6 +5,10 @@ const Transaction = require('../../models').Transaction;
 const PortfolioShare = require('../../models').PortfolioShare;
 
 module.exports = async (req, res) => {
+  if (req.body.amounth < 0)
+    return res.status(400).json({
+      resultMessage: 'Positive amounths are accepted',
+    });
   const user = await User.findOne({
     where: {
       username: req.body.username,
@@ -43,6 +47,7 @@ module.exports = async (req, res) => {
     });
 
   const transaction = await Transaction.create({
+    type: 'buy',
     portfolio_id: portfolio.id,
     share_id: share.id,
     price: share.rate,
@@ -64,7 +69,7 @@ module.exports = async (req, res) => {
     if (usersShare) {
       usersShare
         .update({
-          amounth: req.body.amount + usersShare.amounth,
+          amounth: req.body.amounth + usersShare.amounth,
         })
         .catch((err) => {
           return res.status(400).json({ err });

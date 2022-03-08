@@ -4,6 +4,7 @@ module.exports = {
   async up(queryInterface, Sequelize) {
     return queryInterface.bulkInsert('Transactions', [
       {
+        type: 'buy',
         portfolio_id: 1,
         share_id: '1',
         amounth: 0.2,
@@ -12,6 +13,7 @@ module.exports = {
         updatedAt: new Date(),
       },
       {
+        type: 'buy',
         portfolio_id: 1,
         share_id: '2',
         amounth: 0.7,
@@ -20,6 +22,7 @@ module.exports = {
         updatedAt: new Date(),
       },
       {
+        type: 'sell',
         portfolio_id: 1,
         share_id: '3',
         amounth: 0.9,
@@ -28,6 +31,7 @@ module.exports = {
         updatedAt: new Date(),
       },
       {
+        type: 'sell',
         portfolio_id: 2,
         share_id: '1',
         amounth: 19.25,
@@ -36,6 +40,7 @@ module.exports = {
         updatedAt: new Date(),
       },
       {
+        type: 'sell',
         portfolio_id: 2,
         share_id: '6',
         amounth: 2.2,
@@ -44,6 +49,7 @@ module.exports = {
         updatedAt: new Date(),
       },
       {
+        type: 'sell',
         portfolio_id: 3,
         share_id: '5',
         amounth: 2.7,
@@ -52,6 +58,7 @@ module.exports = {
         updatedAt: new Date(),
       },
       {
+        type: 'buy',
         portfolio_id: 4,
         share_id: '3',
         amounth: 2.2,
@@ -60,6 +67,7 @@ module.exports = {
         updatedAt: new Date(),
       },
       {
+        type: 'buy',
         portfolio_id: 4,
         share_id: '4',
         amounth: 5,
@@ -68,6 +76,7 @@ module.exports = {
         updatedAt: new Date(),
       },
       {
+        type: 'sell',
         portfolio_id: 5,
         share_id: '1',
         amounth: 6,
