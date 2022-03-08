@@ -22,8 +22,11 @@
 - Docker Compose
 - Clone the repository to your local workspace.
   Run <code> docker-compose up </code> command.
-  After that to initialize database with mock data. You need to connect docker instance either with
-  <code> docker exec < container-id > </code> or if you use windows, you can just use Docker Desktop then find container and click to cli button.
+
+  After that to initialize database with mock data.
+  You need to connect docker instance either with
+  <code> docker exec < container-id > </code> or if you use windows,
+  you can just use Docker Desktop then find container and click to cli button.
   After that you just need to run commands below.
   <code>npx sequelize-cli db:migrate</code>
   <code>npx sequelize-cli db:seed:all</code>
